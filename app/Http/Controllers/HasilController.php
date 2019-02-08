@@ -89,7 +89,47 @@ class HasilController extends Controller
      */
     public function create()
     {
-        //
+        $dm = [
+                [690, 3.1, 478, 7, 4, 60],
+                [590, 3.9, 788, 6, 10, 50],
+                [600, 3.6, 798, 8, 7, 40],
+                [620, 3.8, 478, 7, 4, 30],
+                [700, 2.8, 478, 7, 4, 20],
+                [650, 4, 478, 7, 4, 10]
+        ];
+
+        // $sum = [];
+
+
+        for ($i=0; $i < count($dm); $i++) {
+
+            $sum = [];
+
+            // print_r($dm[$i]);
+            // print_r('</br>');
+            // print_r('</br>');
+
+            for ($j=0; $j < count($dm[$i]); $j++) { 
+
+                $pow = pow( $dm[$i][$j], 2);
+
+                // print_r($dm[$j][$i]);
+                print_r(array($j = array($pow)));
+                print_r('</br>');
+                // print_r($sum = array($pow));
+                // print_r('</br>');
+
+
+            }
+            print_r('</br>');
+            // print_r($sum);
+            // print_r('</br>');
+            // print_r('</br>');
+            // print_r('</br>');
+        }
+
+
+
     }
 
     /**
