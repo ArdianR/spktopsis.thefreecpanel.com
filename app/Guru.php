@@ -16,6 +16,6 @@ class Guru extends Model
 
     public function BobotGuru()
     {
-    	return $this->hasMany('App\BobotGuru', 'id_guru')->orderBy('id_kriteria','ASC');
+    	return $this->hasMany('App\BobotGuru', 'id_guru');
     }
 }

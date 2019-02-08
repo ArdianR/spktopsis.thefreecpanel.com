@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\BobotGuru;
 use App\Guru;
 use App\Kriteria;
+use App\Hasil;
 
 class HasilController extends Controller
 {
@@ -16,68 +17,34 @@ class HasilController extends Controller
      */
     public function index()
     {
-        // $bobot_guru = BobotGuru::All();
-        $kriterias = Kriteria::All();
-        $guru = Guru::All();
+        $bobot_guru = BobotGuru::all();
+        $kriterias = Kriteria::all();
+        $guru = Guru::all();
 
-        $sum = [];
-        $sqrt = [];
+        dd($guru);
 
-        $normalization = [];
-        $normalizationWeight = [];
-        
-        $solusiPlus = [];
-        $solusiMinus = [];
-        $_dPlus = [];
-        $_dMinus = [];
-        $result = [];
-        
-        foreach ($kriterias as $key => $kriteria) {
+        // for ($i=0; $i < count($dm); $i++) {
+
+        //     $pembagi[$i] = 0;
+
+        //     for ($j=0; $j < count($dm[$i]); $j++) { 
+
+        //         $pow = pow( $dm[$j][$i], 2 );
+
+        //         $pembagi[$i] = $pembagi[$i] + $pow;
+
+        //     }
+
+        //     $pembagi[$i] = round(sqrt($pembagi[$i]),4);
+        //     echo $pembagi[$i]."</br>";
+
             
-            $sum[$key] = 0;
-            $sqrt[$key] = 0;
-            
-            foreach ($kriteria->bobotguru as $k => $bobotguru) {
-
-                $pow = pow($bobotguru->bobot,2);
-                $sum[$key] = $sum[$key] + $pow;
-
-            }
-
-            $sqrt[$key] = sqrt($sum[$key]);
-
-        }
-
-        foreach ($guru as $key => $guru) {
-
-            $normalization[$key] = [];
-            $normalizationWeight[$key] = [];
-
-            foreach ($guru->bobotguru as $k => $bobotguru) {
-
-                $normalization[$key][$k] = $bobotguru->bobot/$sqrt[$k];
-                echo $normalizationWeight[$key][$k] = ($bobotguru->bobot/$sqrt[$k])*$kriteria->bobotkriteria[$k]->bobot;
-
-            }
-
-        }
-
-        // foreach ($bobot_guru as $bobot_guru) {
-        //     $pow_bobot_guru = new PowBobotGuru;
-        //     $pow_bobot_guru->id_guru = $bobot_guru->id_guru;
-        //     $pow_bobot_guru->id_kriteria = $bobot_guru->id_kriteria;
-        //     $pow_bobot_guru->bobot = pow($bobot_guru->bobot, 2);
-        //     $pow_bobot_guru->save();
         // }
 
-        // $pow_bobot_guru = PowBobotGuru::All();
+        // $hasil = new Hasil;
+        // $hasil->created_date = now();
+        // echo $hasil->save();
 
-        // foreach ($kriteria as $kriteria) {
-        //     $pow_bobot_guru = PowBobotGuru::All();
-        //     dd($pow_bobot_guru);
-        // }
-
-        // dd($pow_bobot_guru);
 
         // return view('hasil.index', compact('bobot_guru', 'kriteria', 'pow_bobot_guru'))->with('i');
     }
@@ -98,37 +65,36 @@ class HasilController extends Controller
                 [650, 4, 478, 7, 4, 10]
         ];
 
-        // $sum = [];
+        $guru = Guru::all();
 
+        for ($i=0; $i < count($guru); $i++) {
 
-        for ($i=0; $i < count($dm); $i++) {
+            $pembagi[$i] = 0;
 
-            $sum = [];
+            for ($j=0; $j < count($guru[$i]); $j++) { 
 
-            // print_r($dm[$i]);
-            // print_r('</br>');
-            // print_r('</br>');
+                $pow = pow( $guru[$j][$i], 2 );
 
-            for ($j=0; $j < count($dm[$i]); $j++) { 
-
-                $pow = pow( $dm[$i][$j], 2);
-
-                // print_r($dm[$j][$i]);
-                print_r(array($j = array($pow)));
-                print_r('</br>');
-                // print_r($sum = array($pow));
-                // print_r('</br>');
-
+                $pembagi[$i] = $pembagi[$i] + $pow;
 
             }
-            print_r('</br>');
-            // print_r($sum);
-            // print_r('</br>');
-            // print_r('</br>');
-            // print_r('</br>');
+
+            $pembagi[$i] = round(sqrt($pembagi[$i]),4);
+            echo $pembagi[$i]."</br>";
+
+            
         }
+        
+        echo "Pembagi";
 
+        // for($k=0; $k < count($dm); $k++){
 
+        //     for($k=0; $k < count($dm); $k++){
+        //         $nor[$i][$j] = round(($dm[$i][$j] / $pembagi[$j]),4);
+        //         echo "<td>".$nor[$i][$j]."</td>";
+        //     }
+        //     echo "</tr>";
+        // }
 
     }
 
