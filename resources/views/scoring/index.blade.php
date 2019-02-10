@@ -5,7 +5,7 @@
 <ol class="breadcrumb">
 	<li class="breadcrumb-item"><a href="{{ url('/')}}">Home</a><i class="fa fa-angle-right"></i>Perhitungan</li>
 </ol>
-<div class="agile-grids">
+<div class="agile-grids" id="print-container">
 	<!-- tables -->
 	<div class="agile-tables">
 		<h3>Penilaian</h3>
@@ -173,4 +173,58 @@
 	</div>
 	<!-- //tables -->
 </div>
+
+
+<!--grid-->
+<div class="validation-system">
+	
+	<div class="validation-form">
+		<!---->
+		<div class="col-md-12 form-group">
+			{{-- <button onclick="document.getElementById('save-form').submit();" type="submit" class="btn btn-primary">Simpan</button> --}}
+			<button id="print_result" type="submit" class="btn btn-primary">Print</button>
+		</div>
+		<div class="clearfix"> </div>
+		<form id="save-form" action="{{ route('scoring.store') }}" method="POST" style="display: none;">
+			@csrf
+		</form>
+		<!---->
+	</div>
+</div>
+<!--//grid-->
+<script src="{{ asset('assets/jspdf/dist/jspdf.min.js')}}"></script>
+<script src="{{ asset('assets/js/jQuery.print.min.js')}}"></script>
+<script>
+    $(document).on('click', 'button#print_result', function (event) {
+        $("div#print-container").print({
+            globalStyles: true,
+            mediaPrint: false,
+            stylesheet: null,
+            noPrintSelector: ".no-print",
+            iframe: true,
+            append: null,
+            prepend: null,
+            manuallyCopyFormValues: true,
+            deferred: $.Deferred(),
+            timeout: 750,
+            title: null,
+            doctype: '<!doctype html>'
+        });
+    });
+
+    $(document).on('click', 'button#pdf_result', function (event) {
+        var doc = new jsPDF('landscape');
+        var specialElementHandlers = {
+            '#editor': function (element, renderer) {
+                return true;
+            }
+        };
+        doc.fromHTML($('#print-container').html(), 0, 0, {
+            'width': 210,
+            'elementHandlers': specialElementHandlers
+        });
+        doc.save('hasil.pdf');
+    });
+
+</script>
 @endsection

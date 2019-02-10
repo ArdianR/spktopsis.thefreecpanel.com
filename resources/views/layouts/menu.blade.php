@@ -29,23 +29,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<script type="text/javascript" src="{{ asset('assets/js/jquery.basictable.min.js') }}"></script>
 		<script type="text/javascript">
 		$(document).ready(function() {
-		$('#table').basictable();
-		$('#table-breakpoint').basictable({
-		breakpoint: 768
-		});
-		$('#table-swap-axis').basictable({
-		swapAxis: true
-		});
-		$('#table-force-off').basictable({
-		forceResponsive: false
-		});
-		$('#table-no-resize').basictable({
-		noResize: true
-		});
-		$('#table-two-axis').basictable();
-		$('#table-max-height').basictable({
-		tableWrapper: true
-		});
+			$('#table-max-height').basictable({
+				tableWrapper: true
+			});
 		});
 		</script>
 		<!-- //tables -->
@@ -205,15 +191,15 @@ else
 		graphArea2 = Morris.Area({
 			element: 'hero-area',
 			padding: 10,
-behaveLikeLine: true,
-gridEnabled: false,
-gridLineColor: '#dddddd',
-axes: true,
-resize: true,
-smooth:true,
-pointSize: 0,
-lineWidth: 0,
-fillOpacity:0.85,
+			behaveLikeLine: true,
+			gridEnabled: false,
+			gridLineColor: '#dddddd',
+			axes: true,
+			resize: true,
+			smooth:true,
+			pointSize: 0,
+			lineWidth: 0,
+			fillOpacity:0.85,
 			data: [
 				{period: '2014 Q1', iphone: 2668, ipad: null, itouch: 2649},
 				{period: '2014 Q2', iphone: 15780, ipad: 13799, itouch: 12051},
@@ -228,9 +214,9 @@ fillOpacity:0.85,
 			],
 			lineColors:['#ff4a43','#a2d200','#22beef'],
 			xkey: 'period',
-redraw: true,
-ykeys: ['iphone', 'ipad', 'itouch'],
-labels: ['All Visitors', 'Returning Visitors', 'Unique Visitors'],
+			redraw: true,
+			ykeys: ['iphone', 'ipad', 'itouch'],
+			labels: ['All Visitors', 'Returning Visitors', 'Unique Visitors'],
 			pointSize: 2,
 			hideHover: 'auto',
 			resize: true
