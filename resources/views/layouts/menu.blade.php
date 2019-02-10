@@ -1,184 +1,243 @@
-<!DOCTYPE html>
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
 <html>
 	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
-		<meta name="author" content="Creative Tim">
-		<title>Argon Dashboard - Free Dashboard for Bootstrap 4</title>
-		<!-- Favicon -->
-		<link href="{{ asset('assets/img/brand/favicon.png') }}" rel="icon" type="image/png">
-		<!-- Fonts -->
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-		<!-- Icons -->
-		<link href="{{ asset('assets/vendor/nucleo/css/nucleo.css') }}" rel="stylesheet">
-		<link href="{{ asset('assets/vendor/@fortawesome/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
-		<!-- Argon CSS -->
-		<link type="text/css" href="{{ asset('assets/css/argon.css') }}?v=1.0.0" rel="stylesheet">
+		<title>Pooled Admin Panel Category Flat Bootstrap Responsive Web Template | Home :: w3layouts</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="Pooled Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+		Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		<!-- Bootstrap Core CSS -->
+		<link href="{{ asset('assets/css/bootstrap.min.css') }}" rel='stylesheet' type='text/css' />
+		<!-- Custom CSS -->
+		<link href="{{ asset('assets/css/style.css') }}" rel='stylesheet' type='text/css' />
+		<link rel="stylesheet" href="{{ asset('assets/css/morris.css') }}" type="text/css"/>
+		<!-- Graph CSS -->
+		<link href="{{ asset('assets/css/font-awesome.css') }}" rel="stylesheet">
+		<!-- jQuery -->
+		<script src="{{ asset('assets/js/jquery-2.1.4.min.js') }}"></script>
+		<!-- //jQuery -->
+		<!-- tables -->
+		<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/table-style.css') }}" />
+		<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/basictable.css') }}" />
+		<script type="text/javascript" src="{{ asset('assets/js/jquery.basictable.min.js') }}"></script>
+		<script type="text/javascript">
+		$(document).ready(function() {
+		$('#table').basictable();
+		$('#table-breakpoint').basictable({
+		breakpoint: 768
+		});
+		$('#table-swap-axis').basictable({
+		swapAxis: true
+		});
+		$('#table-force-off').basictable({
+		forceResponsive: false
+		});
+		$('#table-no-resize').basictable({
+		noResize: true
+		});
+		$('#table-two-axis').basictable();
+		$('#table-max-height').basictable({
+		tableWrapper: true
+		});
+		});
+		</script>
+		<!-- //tables -->
+		<link href='//fonts.googleapis.com/css?family=Roboto:700,500,300,100italic,100,400' rel='stylesheet' type='text/css'/>
+		<link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+		<!-- lined-icons -->
+		<link rel="stylesheet" href="{{ asset('assets/css/icon-font.min.css') }}" type='text/css' />
+		<!-- //lined-icons -->
 	</head>
 	<body>
-		<!-- Sidenav -->
-		<nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-white" id="sidenav-main">
-			<div class="container-fluid">
-				<!-- Toggler -->
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-				</button>
-				<!-- Brand -->
-				<a class="navbar-brand pt-0" href="./index.html">
-					<img src="{{ asset('assets/img/brand/blue.png') }}" class="navbar-brand-img" alt="...">
-				</a>
-				<!-- User -->
-				<ul class="nav align-items-center d-md-none">
-					<li class="nav-item dropdown">
-						<a class="nav-link nav-link-icon" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							<i class="ni ni-bell-55"></i>
-						</a>
-						<div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right" aria-labelledby="navbar-default_dropdown_1">
-							<a class="dropdown-item" href="#">Action</a>
-							<a class="dropdown-item" href="#">Another action</a>
-							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="#">Something else here</a>
+		<div class="page-container">
+			<!--/content-inner-->
+			<div class="left-content">
+				<div class="mother-grid-inner">
+					<!--header start here-->
+					<div class="header-main">
+						<div class="logo-w3-agile">
+							<h1><a href="{{ url('/') }}">Pooled</a></h1>
 						</div>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							<div class="media align-items-center">
-								<span class="avatar avatar-sm rounded-circle">
-									<img alt="Image placeholder" src="{{ asset('assets/img/theme/team-1-800x800.jpg') }}">
-								</span>
-							</div>
-						</a>
-						<div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
-							<div class=" dropdown-header noti-title">
-								<h6 class="text-overflow m-0">Welcome!</h6>
-							</div>
-							<a href="./examples/profile.html" class="dropdown-item">
-								<i class="ni ni-single-02"></i>
-								<span>My profile</span>
-							</a>
-							<a href="./examples/profile.html" class="dropdown-item">
-								<i class="ni ni-settings-gear-65"></i>
-								<span>Settings</span>
-							</a>
-							<a href="./examples/profile.html" class="dropdown-item">
-								<i class="ni ni-calendar-grid-58"></i>
-								<span>Activity</span>
-							</a>
-							<a href="./examples/profile.html" class="dropdown-item">
-								<i class="ni ni-support-16"></i>
-								<span>Support</span>
-							</a>
-							<div class="dropdown-divider"></div>
-							<a href="#!" class="dropdown-item">
-								<i class="ni ni-user-run"></i>
-								<span>Logout</span>
-							</a>
+						<div class="profile_details w3l">
+							<ul>
+								<li class="dropdown profile_details_drop">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+										<div class="profile_img">
+											<span class="prfil-img"><img src="{{ asset('assets/images/in4.jpg') }}" alt=""> </span>
+											<div class="user-name" style="justify-content: center;">
+												<span>Administrator</span>
+											</div>
+											<i class="fa fa-angle-down"></i>
+											<i class="fa fa-angle-up"></i>
+											<div class="clearfix"></div>
+										</div>
+									</a>
+									<ul class="dropdown-menu drp-mnu">
+										<li> <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();"><i class="fa fa-sign-out"></i> Logout</a> </li>
+										<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+											@csrf
+										</form>
+									</ul>
+								</li>
+							</ul>
 						</div>
-					</li>
-				</ul>
-				<!-- Collapse -->
-				<div class="collapse navbar-collapse" id="sidenav-collapse-main">
-					<!-- Collapse header -->
-					<div class="navbar-collapse-header d-md-none">
-						<div class="row">
-							<div class="col-6 collapse-brand">
-								<a href="./index.html">
-									<img src="{{ asset('assets/img/brand/blue.png') }}">
-								</a>
-							</div>
-							<div class="col-6 collapse-close">
-								<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle sidenav">
-								<span></span>
-								<span></span>
-								</button>
-							</div>
-						</div>
+						
+						<div class="clearfix"> </div>
 					</div>
-					<!-- Form -->
-					<form class="mt-4 mb-3 d-md-none">
-						<div class="input-group input-group-rounded input-group-merge">
-							<input type="search" class="form-control form-control-rounded form-control-prepended" placeholder="Search" aria-label="Search">
-							<div class="input-group-prepend">
-								<div class="input-group-text">
-									<span class="fa fa-search"></span>
-								</div>
-							</div>
-						</div>
-					</form>
-					<!-- Navigation -->
-					<ul class="navbar-nav">
-						<li class="nav-item">
-							<a class="nav-link" href="./index.html">
-								<i class="ni ni-tv-2 text-primary"></i> Dashboard
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="{{ route('guru.index') }}">
-								<i class="ni ni-planet text-blue"></i> Guru
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="{{ route('kriteria.index') }}">
-								<i class="ni ni-pin-3 text-orange"></i> Kriteria
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="{{ route('bobot_guru.index') }}">
-								<i class="ni ni-single-02 text-yellow"></i> Bobot Guru
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="{{ route('hasil.index')}}">
-								<i class="ni ni-bullet-list-67 text-red"></i> Hasil
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="./examples/login.html">
-								<i class="ni ni-key-25 text-info"></i> Login
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="./examples/register.html">
-								<i class="ni ni-circle-08 text-pink"></i> Register
-							</a>
-						</li>
-					</ul>
-					<!-- Divider -->
-					<hr class="my-3">
-					<!-- Heading -->
-					<h6 class="navbar-heading text-muted">Documentation</h6>
-					<!-- Navigation -->
-					<ul class="navbar-nav mb-md-3">
-						<li class="nav-item">
-							<a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/getting-started/overview.html">
-								<i class="ni ni-spaceship"></i> Getting started
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/foundation/colors.html">
-								<i class="ni ni-palette"></i> Foundation
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/components/alerts.html">
-								<i class="ni ni-ui-04"></i> Components
-							</a>
-						</li>
-					</ul>
+					<!--heder end here-->
+					
+					@yield('content')
+					<!-- script-for sticky-nav -->
+					<script>
+					$(document).ready(function() {
+						var navoffeset=$(".header-main").offset().top;
+						$(window).scroll(function(){
+							var scrollpos=$(window).scrollTop();
+							if(scrollpos >=navoffeset){
+								$(".header-main").addClass("fixed");
+							}else{
+								$(".header-main").removeClass("fixed");
+							}
+						});
+						
+					});
+					</script>
+					<!-- /script-for sticky-nav -->
+					<!--inner block start here-->
+					<div class="inner-block">
+					</div>
+					<!--inner block end here-->
+					<!--copy rights start here-->
+					<div class="copyrights">
+						<p>© 2016 Pooled. All Rights Reserved | Design by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
+					</div>
+					<!--COPY rights end here-->
 				</div>
 			</div>
-		</nav>
-		<!-- Main content -->
-		@yield('content')
-		<!-- Argon Scripts -->
-		<!-- Core -->
-		<script src="{{ asset('assets/vendor/jquery/dist/jquery.min.js') }}"></script>
-		<script src="{{ asset('assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
-		<!-- Optional JS -->
-		<script src="{{ asset('assets/vendor/chart.js/dist/Chart.min.js') }}"></script>
-		<script src="{{ asset('assets/vendor/chart.js/dist/Chart.extension.js') }}"></script>
-		<!-- Argon JS -->
-		<script src="{{ asset('assets/js/argon.js?v=1.0.0') }}"></script>
-	</body>
+			<!--//content-inner-->
+			<!--/sidebar-menu-->
+			<div class="sidebar-menu">
+				<header class="logo1">
+					<a href="#" class="sidebar-icon"> <span class="fa fa-bars"></span> </a>
+				</header>
+				<div style="border-top:1px ridge rgba(255, 255, 255, 0.15)"></div>
+				<div class="menu">
+					<ul id="menu" >
+						<li><a href="index.html"><i class="fa fa-tachometer"></i> <span>Dashboard</span><div class="clearfix"></div></a></li>
+						<li id="menu-academico" ><a href="#"><i class="fa fa-list-ul" aria-hidden="true"></i><span> Criteria</span> <span class="fa fa-angle-right" style="float: right"></span><div class="clearfix"></div></a>
+						<ul id="menu-academico-sub" >
+							<li id="menu-academico-avaliacoes" ><a href="{{ route('criteria.create') }}">Tambah Criteria</a></li>
+							<li id="menu-academico-avaliacoes" ><a href="{{ route('criteria.index') }}">List Criteria</a></li>
+						</ul>
+					</li>
+					<li id="menu-academico" ><a href="#"><i class="fa fa-cogs" aria-hidden="true"></i><span> Alternatives</span> <span class="fa fa-angle-right" style="float: right"></span><div class="clearfix"></div></a>
+					<ul id="menu-academico-sub" >
+						<li id="menu-academico-avaliacoes" ><a href="{{ route('alternative.create') }}">Tambah Alternative</a></li>
+						<li id="menu-academico-avaliacoes" ><a href="{{ route('alternative.index') }}">List Alternative</a></li>
+					</ul>
+					<li id="menu-academico" ><a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i><span> Penilaian</span> <span class="fa fa-angle-right" style="float: right"></span><div class="clearfix"></div></a>
+					<ul id="menu-academico-sub" >
+						<li id="menu-academico-avaliacoes" ><a href="{{ route('score.create') }}">Tambah Penilaian</a></li>
+						<li id="menu-academico-avaliacoes" ><a href="{{ route('score.index') }}">List Penilaian</a></li>
+					</ul>
+				</li>
+				<li><a href="{{ route('scoring.index')}}"><i class="fa fa-table"></i>  <span>Perhitungan</span><div class="clearfix"></div></a></li>
+				{{-- <li><a href=""><i class="fa fa-check-square-o nav_icon" aria-hidden="true"></i>  <span>Laporan</span><div class="clearfix"></div></a></li> --}}
+			</ul>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</div>
+<script>
+var toggle = true;
+			
+$(".sidebar-icon").click(function() {
+if (toggle)
+{
+	$(".page-container").addClass("sidebar-collapsed").removeClass("sidebar-collapsed-back");
+	$("#menu span").css({"position":"absolute"});
+}
+else
+{
+	$(".page-container").removeClass("sidebar-collapsed").addClass("sidebar-collapsed-back");
+	setTimeout(function() {
+	$("#menu span").css({"position":"relative"});
+	}, 400);
+}
+				
+				toggle = !toggle;
+			});
+</script>
+<!--js -->
+<script src="{{ asset('assets/js/jquery.nicescroll.js') }}"></script>
+<script src="{{ asset('assets/js/scripts.js') }}"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+<!-- /Bootstrap Core JavaScript -->
+<!-- morris JavaScript -->
+<script src="{{ asset('assets/js/raphael-min.js') }}"></script>
+<script src="{{ asset('assets/js/morris.js') }}"></script>
+<script>
+	$(document).ready(function() {
+		//BOX BUTTON SHOW AND CLOSE
+	jQuery('.small-graph-box').hover(function() {
+		jQuery(this).find('.box-button').fadeIn('fast');
+	}, function() {
+		jQuery(this).find('.box-button').fadeOut('fast');
+	});
+	jQuery('.small-graph-box .box-close').click(function() {
+		jQuery(this).closest('.small-graph-box').fadeOut(200);
+		return false;
+	});
+	
+	//CHARTS
+	function gd(year, day, month) {
+			return new Date(year, month - 1, day).getTime();
+		}
+		
+		graphArea2 = Morris.Area({
+			element: 'hero-area',
+			padding: 10,
+behaveLikeLine: true,
+gridEnabled: false,
+gridLineColor: '#dddddd',
+axes: true,
+resize: true,
+smooth:true,
+pointSize: 0,
+lineWidth: 0,
+fillOpacity:0.85,
+			data: [
+				{period: '2014 Q1', iphone: 2668, ipad: null, itouch: 2649},
+				{period: '2014 Q2', iphone: 15780, ipad: 13799, itouch: 12051},
+				{period: '2014 Q3', iphone: 12920, ipad: 10975, itouch: 9910},
+				{period: '2014 Q4', iphone: 8770, ipad: 6600, itouch: 6695},
+				{period: '2015 Q1', iphone: 10820, ipad: 10924, itouch: 12300},
+				{period: '2015 Q2', iphone: 9680, ipad: 9010, itouch: 7891},
+				{period: '2015 Q3', iphone: 4830, ipad: 3805, itouch: 1598},
+				{period: '2015 Q4', iphone: 15083, ipad: 8977, itouch: 5185},
+				{period: '2016 Q1', iphone: 10697, ipad: 4470, itouch: 2038},
+				{period: '2016 Q2', iphone: 8442, ipad: 5723, itouch: 1801}
+			],
+			lineColors:['#ff4a43','#a2d200','#22beef'],
+			xkey: 'period',
+redraw: true,
+ykeys: ['iphone', 'ipad', 'itouch'],
+labels: ['All Visitors', 'Returning Visitors', 'Unique Visitors'],
+			pointSize: 2,
+			hideHover: 'auto',
+			resize: true
+		});
+		
+	
+	});
+</script>
+</body>
 </html>

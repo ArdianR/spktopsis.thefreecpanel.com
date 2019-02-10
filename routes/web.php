@@ -12,14 +12,14 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('login');
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('/guru', 'GuruController');
-Route::resource('/kriteria', 'KriteriaController');
-Route::resource('/bobot_guru', 'BobotGuruController');
-Route::resource('/hasil', 'HasilController');
+Route::resource('/criteria', 'CriteriaController');
+Route::resource('/alternative', 'AlternativeController');
+Route::resource('/score', 'ScoreController');
+Route::resource('/scoring', 'ScoringController');
